@@ -20,4 +20,4 @@ A criação do algoritmo foi pensada para que fosse possível ser utilizado por 
 
 # Explicações gerais sobre o algoritmo
 
-As informações, à respeito do uso, podem ser encontradas no próprio arquivo do algoritmo, juntamente a um vídeo com breves explicações da sua utilização.
+As informações e explicações quanto aos comandos, métodos, funções e afins, utilizados no algoritmo, podem ser encontradas no arquivo 'algoritmo_comentado', o qual é uma cópia do arquivo original, porém com comentários linha-a-linha.
