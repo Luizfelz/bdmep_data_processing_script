@@ -1,4 +1,12 @@
-# Projeto_Pesquisa_PIBIC-UFPB
+# Script de Processamento de Dados do BDMEP
+
+[EG-US](https://github.com/Luizfelz/bdmep_data_processing_script/blob/main/README_EN-US.md)
+
+### Como usar a aplicação
+
+1. Clone esse repositório
+2. Baixe o CSV que deseja do [BDMEP](https://bdmep.inmet.gov.br/)
+3. Execute o arquivo executável "BDMEP_data_processing.exe"
 
 ### **Contexto**
 
@@ -8,16 +16,7 @@ O [Python](https://www.python.org/) é uma linguagem de programação de alto n�
 
 O [Banco de Dados Meteorológicos](https://bdmep.inmet.gov.br/) do [Instituto Nacional de Meteorologia](https://portal.inmet.gov.br/) (BDMEP - INMET) é um banco de dados digital que agrupa dados meteorológicos de séries históricas de estações meteorológicas automáticas e convencionais, conforme normas técnicas internacionais da [Organização Meteorológica Mundial](https://news.un.org/pt/tags/organizacao-meteorologica-mundial).
 
-O [NASA POWER](https://power.larc.nasa.gov/data-access-viewer/) é um projeto da [NASA](https://www.nasa.gov/) que fornece parâmetros relacionados ao Sol e meteorologia habilitada geoespacialmente que permitem avaliação e projeção de sistemas de energia renovável.
-
 ### **Objetivo**
 
-O objetivo deste projeto é a criação de um algoritmo capaz de tratar os dados brutos retirados do BDMEP e da NASA. O algoritmo ainda está em desenvolvimento e, atualmente, consegue realizar o processamento apenas de dados diários e mensais, retirados do BDMEP (para uma ou mais variáveis simultâneamente), e dados mensais retirados da NASA (para apenas uma variável por vez). No entanto, o objetivo futuro é que seja capaz de fazer o processamento de qualquer intervalo de dados (horários, diários ou mensais) e para qualquer quantidade de variáveis.
+O objetivo deste projeto é a criação de um algoritmo capaz de tratar os dados brutos retirados do BDMEP. O algoritmo e o executável ainda está em desenvolvimento e, eventualmente, novas versões serão disponibilizadas caso necessário.
 
-### **Justificativa**
-
-A criação do algoritmo foi pensada para que fosse possível ser utilizado por qualquer pessoa, com ou sem nenhum conhecimento prévio em programação, em pesquisas que fizessem uso dos dados disponibilizados pelo BDMEP e pela NASA. Ainda, a utilização de ferramentas computacionais para cálculos e processamento de dados ajuda na diminuição de erros propagados por análises manuais e na diminuição do tempo de processamento, permitindo uma análise mais rápida, eficiente e precisa.
-
-# Explicações gerais sobre o algoritmo
-
-As informações e explicações quanto aos comandos, métodos, funções e afins, utilizados no algoritmo, podem ser encontradas no arquivo 'algoritmo_comentado', o qual é uma cópia do arquivo original, porém com comentários linha-a-linha.
