@@ -1,6 +1,6 @@
 # Script de Processamento de Dados do BDMEP
 
-[EG-US](https://github.com/Luizfelz/bdmep_data_processing_script/blob/main/README_EN-US.md)
+[EN-US](https://github.com/Luizfelz/bdmep_data_processing_script/blob/main/README_EN-US.md)
 
 ### Como usar a aplicação
 
