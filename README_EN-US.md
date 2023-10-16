@@ -8,9 +8,7 @@
 2. Download the CSV you want from [BDMEP](https://bdmep.inmet.gov.br/)
 3. Run the executable "BDMEP_data_processing.exe"
 
-```
-Note: This application may not work correctly for operating systems other than Windows.
-```
+> Note: This application may not work correctly for operating systems other than Windows.
 
 ### **Context**
 
