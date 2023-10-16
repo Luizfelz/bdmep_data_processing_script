@@ -8,6 +8,10 @@
 2. Download the CSV you want from [BDMEP](https://bdmep.inmet.gov.br/)
 3. Run the executable "BDMEP_data_processing.exe"
 
+```
+Note: This application may not work correctly for operating systems other than Windows.
+```
+
 ### **Context**
 
 The use of renewable sources is extremely important given the climate change scenario that the world is facing. The Brazilian energy matrix consists of many renewable sources for energy generation, but unfortunately these sources depend on some climatic variables, such as temperature, rainfall, wind speed, radiation, and many others. In this context, the study of climate variables is essential, however the exorbitant amount of raw data to be analyzed makes it necessary to use tools capable of performing this function quickly and effectively. The use of algorithms for processing databases is quite common and has grown significantly in recent years, even more so when considering the more frequent use of programming languages to perform and automate tasks that were previously performed manually.
