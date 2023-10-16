@@ -83,6 +83,15 @@ dict_columns_names ={
  'VENTO, RAJADA MAXIMA(m/s)':'hourly_max_wind_gust_metersPerSec'
 }
 
+dict_sheet_names = {
+  'allYearsPerMonth':'Returns the average value for each month, considering the complete data series',
+  'first10yearsPerMonth':'Returns the average value for each month, considering only the first 10 years of the data series',
+  'last10yearsPerMonth':'Returns the average value for each month, considering only the last 10 years of the data series',
+  'allYearPerYear':'Returns the average value for each year, considering the complete data series',
+  'first10yearsPerYear':'Returns the average value for each year, considering only the first 10 years of the data series',
+  'last10yearsPerYear':'Returns the average value for each year, considering only the last 10 years of the data series'
+}
+
 def create_dataframe(file_path):
   df = pd.read_csv(file_path, delimiter=';', skiprows=10)
   return df
@@ -91,6 +100,17 @@ def create_dataframe(file_path):
 def get_csv_header_info(file_path):
   df_infos = pd.read_csv(file_path, delimiter=';', nrows=9, header=None, names=['station_infos'])
   return df_infos
+
+
+def get_instructions_sheet(dict_columns_names):
+  df = pd.DataFrame(list(dict_columns_names.items()), columns=['BDMEP_original_variable_name', 'renamed_variable'])
+  df = df[['renamed_variable','BDMEP_original_variable_name']]
+  df['__________'] = ''
+  df_temp = pd.DataFrame(list(dict_sheet_names.items()), columns=['sheet_name','description'])
+  df['sheet_name'] = df_temp['sheet_name']
+  df['description'] = df_temp['description']
+  df.fillna('', inplace=True)
+  return df
 
 
 def remove_unnamed_colum(df):
@@ -186,6 +206,9 @@ def save_all_final_result_to_xlsx_file():
   with pd.ExcelWriter(f'{final_result_file_name}.xlsx') as excel_writer: #, engine='openpyxl'
     station_infos = get_csv_header_info(file_path)
     station_infos.to_excel(excel_writer, sheet_name='stationInfos', index=False)
+    
+    instructions_sheet = get_instructions_sheet(dict_columns_names)
+    instructions_sheet.to_excel(excel_writer, sheet_name='instructions', index=False)
 
     # SQL 1
     df, numeric_columns = get_final_result_df()
